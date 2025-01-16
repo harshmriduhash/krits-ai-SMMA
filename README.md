@@ -61,8 +61,3 @@ To run Krits locally, follow these steps:
     ```bash
     pnpm run dev
     ```
-
-## 💬 Contact
-If you have any questions or feedback, feel free to reach out via [GitHub Issues](https://github.com/AshabWazowski/krits-ai-SMMA/issues).
-
----
