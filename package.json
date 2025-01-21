@@ -10,7 +10,7 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@clerk/nextjs": "^5.3.3",
+    "@clerk/nextjs": "^5.7.5",
     "@clerk/types": "^4.14.0",
     "@headlessui/react": "^2.1.2",
     "@hookform/resolvers": "^3.9.0",

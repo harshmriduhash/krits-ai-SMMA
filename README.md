@@ -11,10 +11,6 @@ Krits is an innovative social media marketing platform designed to help you stre
 - Custom report generation
 - ROI tracking and analysis
 
-## 🔗 Live Preview
-
-Check out the live demo of Krits here: [Live Preview](http://Krits-Ai.vercel.app) 
-
 ## 💻 Tech Stack
 
 * Next.js
