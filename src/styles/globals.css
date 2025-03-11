@@ -143,7 +143,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--foreground)/0.1);
+  background: hsl(var(--foreground) / 0.1);
   border-radius: 10px;
 }
 
@@ -165,7 +165,7 @@ img {
   overflow: hidden;
   margin-inline: auto;
   transform: translateX(calc(-1 * 5px / 2));
-  transition: .24s var(--ease-out-quad);
+  transition: 0.24s var(--ease-out-quad);
   transition-property: background, -webkit-clip-path;
   transition-property: clip-path, background;
   transition-property: clip-path, background, -webkit-clip-path;
@@ -189,8 +189,15 @@ img {
   /* background-image: linear-gradient(to right, hsl(var(--primary)), #9333ea); */
   color: #fff;
   text-align: center;
-  background-image: radial-gradient(circle farthest-side at 30% 0, rgba(255, 255, 255, .12), transparent);
-  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, .24), 0 1px 3px hsl(var(--primary)/0.24), 0 2px 6px hsl(var(--primary)/0.24), 0 4px 8px rgba(96, 10, 255, 0.12), 0 16px 32px -8px hsl(var(--primary)/0.48)
+  background-image: radial-gradient(
+    circle farthest-side at 30% 0,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.24),
+    0 1px 3px hsl(var(--primary) / 0.24), 0 2px 6px hsl(var(--primary) / 0.24),
+    0 4px 8px rgba(96, 10, 255, 0.12),
+    0 16px 32px -8px hsl(var(--primary) / 0.48);
 }
 
 .btn-primary:hover {
@@ -198,8 +205,7 @@ img {
   color: #fff;
   transform: scale(1.05) translateY(-4px);
   box-shadow: inset 0 0 rgba(255, 255, 255, 0.24),
-    0 1px 3px rgba(124, 58, 237, 0.24),
-    0 2px 6px rgba(124, 58, 237, 0.24),
+    0 1px 3px rgba(124, 58, 237, 0.24), 0 2px 6px rgba(124, 58, 237, 0.24),
     0 4px 8px rgba(124, 58, 237, 0.12),
     0 20px 40px -8px rgba(124, 58, 237, 0.64);
 }
@@ -208,38 +214,40 @@ img {
   background-color: #7c3aed;
   transform: scale(1) translate(0);
   box-shadow: inset 0 0 rgba(255, 255, 255, 0.24),
-    0 1px 3px rgba(124, 58, 237, 0.48),
-    0 2px 6px rgba(124, 58, 237, 0.48),
-    0 4px 8px rgba(124, 58, 237, 0.48),
-    0 4px 12px -8px rgba(124, 58, 237, 1);
+    0 1px 3px rgba(124, 58, 237, 0.48), 0 2px 6px rgba(124, 58, 237, 0.48),
+    0 4px 8px rgba(124, 58, 237, 0.48), 0 4px 12px -8px rgba(124, 58, 237, 1);
 }
 
 .btn-secondary {
   z-index: 20;
-  background-color: hsl(var(--background)/0.04);
+  background-color: hsl(var(--background) / 0.04);
   color: #fff;
   text-align: center;
-  background-image: radial-gradient(circle farthest-side at 35% -50%, rgba(255, 255, 255, .08), rgba(255, 255, 255, 0));
-  box-shadow: 0 8px 40px -20px rgba(255, 255, 255, .2),
-    inset 1px 1px rgba(255, 255, 255, .08),
-    inset 0 0 0 1px rgba(255, 255, 255, .06);
+  background-image: radial-gradient(
+    circle farthest-side at 35% -50%,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0)
+  );
+  box-shadow: 0 8px 40px -20px rgba(255, 255, 255, 0.2),
+    inset 1px 1px rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 .btn-secondary:hover {
-  background-color: hsl(var(--background)/0.08);
+  background-color: hsl(var(--background) / 0.08);
   color: #fff;
   transform: scale(1.05) translateY(-4px);
-  box-shadow: 0 8px 40px -20px rgba(255, 255, 255, .32),
-    inset 1px 1px rgba(255, 255, 255, .08),
-    inset 0 0 0 1px rgba(255, 255, 255, .1);
+  box-shadow: 0 8px 40px -20px rgba(255, 255, 255, 0.32),
+    inset 1px 1px rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .btn-secondary:active {
-  background-color: hsl(var(--background)/0.08);
+  background-color: hsl(var(--background) / 0.08);
   transform: scale(1) translateY(0);
-  box-shadow: 0 8px 40px -20px rgba(255, 255, 255, .32),
-    inset 1px 1px rgba(255, 255, 255, .08),
-    inset 0 0 0 1px rgba(255, 255, 255, .1);
+  box-shadow: 0 8px 40px -20px rgba(255, 255, 255, 0.32),
+    inset 1px 1px rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .badge {
@@ -275,7 +283,11 @@ img {
   position: absolute;
   inset: 0;
   z-index: 10;
-  background: radial-gradient(200px circle at var(--mouse-x) var(--mouse-y), hsl(var(--foreground)), transparent);
+  background: radial-gradient(
+    200px circle at var(--mouse-x) var(--mouse-y),
+    hsl(var(--foreground)),
+    transparent
+  );
   transition: background 0.3s ease;
 }
 
@@ -284,7 +296,7 @@ img {
 }
 
 :root {
-  --content-background: #100F1B;
+  --content-background: #100f1b;
   --spot-light-size: 800px;
   --spot-light-color: rgba(139, 92, 246, 0.15);
   --card-border-color: rgba(255, 255, 255, 0.4);
@@ -307,7 +319,7 @@ img {
 
 .card:before,
 .card:after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   transition: opacity 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -317,16 +329,20 @@ img {
 
 /* spotlight */
 .card:after {
-  background: radial-gradient(var(--spot-light-size) circle at var(--pos-x) var(--pos-y),
-      var(--spot-light-color),
-      transparent 40%);
+  background: radial-gradient(
+    var(--spot-light-size) circle at var(--pos-x) var(--pos-y),
+    var(--spot-light-color),
+    transparent 40%
+  );
 }
 
 /* card's border */
 .card:before {
-  background: radial-gradient(calc(var(--spot-light-size) / 2) circle at var(--pos-x) var(--pos-y),
-      var(--card-border-color),
-      transparent 40%);
+  background: radial-gradient(
+    calc(var(--spot-light-size) / 2) circle at var(--pos-x) var(--pos-y),
+    var(--card-border-color),
+    transparent 40%
+  );
 }
 
 .card:hover:after,
@@ -335,11 +351,19 @@ img {
 }
 
 .pricing {
-  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 24, 51, .6), rgba(25, 8, 43, .3));
+  background: radial-gradient(
+    ellipse 80% 50% at 50% -20%,
+    rgba(0, 24, 51, 0.6),
+    rgba(25, 8, 43, 0.3)
+  );
 }
 
 .footer::before {
-  background: radial-gradient(50% 56400% at 50% 100%, rgba(40, 34, 57, 0.2) 0%, rgba(169, 163, 194, 0) 100%);
+  background: radial-gradient(
+    50% 56400% at 50% 100%,
+    rgba(40, 34, 57, 0.2) 0%,
+    rgba(169, 163, 194, 0) 100%
+  );
   bottom: 0;
   content: "";
   height: 1px;
@@ -354,5 +378,13 @@ img {
 }
 
 .gradient {
-  background: conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(36, 0, 255) 0deg, rgb(0, 135, 255) 67.5deg, rgb(108, 39, 157) 198.75deg, rgb(24, 38, 163) 251.25deg, rgb(54, 103, 196) 301.88deg, rgb(105, 30, 255) 360deg);
+  background: conic-gradient(
+    from 230.29deg at 51.63% 52.16%,
+    rgb(36, 0, 255) 0deg,
+    rgb(0, 135, 255) 67.5deg,
+    rgb(108, 39, 157) 198.75deg,
+    rgb(24, 38, 163) 251.25deg,
+    rgb(54, 103, 196) 301.88deg,
+    rgb(105, 30, 255) 360deg
+  );
 }
